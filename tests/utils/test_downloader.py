@@ -38,7 +38,7 @@ class LockFileTest(unittest.TestCase):
             with open(lock_file_path, "w", encoding="utf-8") as f:
                 f.write("temp test")
 
-            # downloading with exist lock file
+            #downloading with exist lock file
             config_file = get_path_from_url_with_filelock(self.test_url, root_dir=tempdir)
             self.assertIsNotNone(config_file)
 
